@@ -7,8 +7,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="container">
+      <% flash.each do |msg_type, msg| %>
+        <%= content_tag :div, msg, class: 'alert alert-info text-center' %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
