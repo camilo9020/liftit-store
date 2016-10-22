@@ -11,11 +11,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-brand">
-      <%= link_to 'Dashboard Tienda Packend', admin_path %>
+      <%= link_to 'Dashboard Tienda Liftit', admin_path %>
     </div>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Nuevo Premio', '#'  %></li>
+        <li><%= link_to 'Nuevo Premio', new_admin_prize_path  %></li>
         <li><%= link_to 'Editar cuenta', edit_admin_registration_path  %></li>
         <li><%= link_to 'Salir', destroy_admin_session_path, method: :delete %></li>
       </ul>

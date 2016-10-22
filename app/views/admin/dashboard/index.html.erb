@@ -13,6 +13,15 @@
     </tr>
   </thead>
   <tbody>
+    <% @prizes.each do |prize| %>
+      <tr>
+        <td><%= link_to prize.name, admin_prize_path(prize)  %></td>
+        <td><%= prize.description %></td>
+        <td>
+          <%= prize.amount %>
+        </td>
+      </tr>
+    <% end %>
 
   </tbody>
   </table>

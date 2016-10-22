@@ -4,6 +4,7 @@ class Admin::DashboardController < ApplicationController
   layout 'admin'
 
   def index
+     @prizes = Prize.all
 
   end
 

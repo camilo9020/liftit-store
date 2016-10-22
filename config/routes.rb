@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resource :dashboard, only: [:index]
+    resources :prizes, only: [:show, :new, :create, :edit, :update, :destroy]
 
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
