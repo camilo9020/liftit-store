@@ -9,7 +9,8 @@
 #  updated_at :datetime         not null
 #
 
-class Condition < ApplicationRecord
-  has_many :prizes
+class MultiplesCondition < Condition
+
+
 
 end
