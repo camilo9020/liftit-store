@@ -5,7 +5,10 @@ class Admin::DashboardController < ApplicationController
 
   def index
      @prizes = Prize.all
+  end
 
+  def show_subscribers
+    @subscribers = Subscriber.all
   end
 
 end

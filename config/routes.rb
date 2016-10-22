@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
-  root 'pages#index'
+  root 'subscribers#new'
   resources :subscribers
   get 'admin' => 'admin/dashboard#index'
   devise_for :admins
 
   namespace :admin do
     resource :dashboard, only: [:index]
+    get 'show_subscribers' => 'dashboard#show_subscribers'
     resources :prizes, only: [:show, :new, :create, :edit, :update, :destroy]
 
   end
